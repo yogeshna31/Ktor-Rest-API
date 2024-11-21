@@ -32,7 +32,7 @@ fun Route.employeeRoute(){
             employeeList.add(emp);
             call.respond(HttpStatusCode.Created,emp)
         }catch (e : Exception){
-            call.respond(HttpStatusCode.BadRequest,"Missing some Field")
+            call.respond(HttpStatusCode.BadRequest,"Missing Required Field")
         }
     }
 

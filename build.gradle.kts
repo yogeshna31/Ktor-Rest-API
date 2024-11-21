@@ -28,6 +28,17 @@ dependencies {
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-server-config-yaml")
-    testImplementation("io.ktor:ktor-server-test-host-jvm")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+//    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.0")
+    implementation("io.ktor:ktor-serialization-jackson:2.3.0")
+
+
+//    testImplementation("io.ktor:ktor-server-test-host-jvm")
+//    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+    testImplementation("io.kotest:kotest-runner-junit5:5.5.5")
+    testImplementation("io.kotest:kotest-assertions-core:5.5.5")
+    testImplementation("io.kotest:kotest-framework-engine:5.5.5")
+    testImplementation("io.ktor:ktor-server-tests:2.0.0")
+    testImplementation("io.ktor:ktor-server-test-host:2.3.0")
+    runtimeOnly("io.ktor:ktor-client-content-negotiation:3.0.1")
+
 }
